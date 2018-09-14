@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"author": "Ken Hilton"
+	},
+	"bbcodecontent": "{{optional}}",
+	"bbcc-desc": "Description of the extension",
+	"bbcc-quote-author": "Bold paragraph just before a quote showing the author"
+}

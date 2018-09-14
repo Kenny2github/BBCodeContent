@@ -1,0 +1,46 @@
+{
+	"name": "BBCodeContent",
+	"author": "Ken Hilton",
+	"descriptionmsg": "bbcc-desc",
+	"url": "https://github.com/Kenny2github/BBCodeContent",
+	"license-name": "MIT",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.25.0"
+	},
+	"MessagesDirs": {
+		"BBCodeContent": [
+			"i18n"
+		]
+	},
+	"ContentHandlers": {
+		"BBCode": "MediaWiki\\Extension\\BBCodeContent\\BBCodeContentHandler"
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\BBCodeContent\\Hooks": "Hooks.php",
+		"MediaWiki\\Extension\\BBCodeContent\\BBCodeContent": "BBCodeContent.php",
+		"MediaWiki\\Extension\\BBCodeContent\\BBCodeContentHandler": "BBCodeContentHandler.php",
+		"MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers": "DefaultTagHandlers.php"
+	},
+	"config": {
+		"BBCCTags": {
+			"b": [ "<b>", "</b>", false ],
+			"i": [ "<i>", "</i>", false ],
+			"u": [ "<u>", "</u>", false ],
+			"s": [ "<s>", "</s>", false ],
+			"color": [ "<span style=\"color: {PARAM}\">", "</span>", false ],
+			"url": [ "<a rel=\"nofollow\" href=\"{PARAM}\">", "</a>", false ],
+			"big": [ "<big>", "</big>", false ],
+			"small": [ "<small>", "</small>", false ],
+			"list": "MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers::tagList",
+			"*": [ "<li>", "</li>", true ],
+			"quote": "MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers::tagQuote",
+			"img": "MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers::tagImg",
+			"wiki": "MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers::tagWiki",
+			"code": "MediaWiki\\Extension\\BBCodeContent\\DefaultTagHandlers::tagCode",
+			"center": [ "<center>", "</center>", false ]
+		}
+	},
+	"callback": "MediaWiki\\Extension\\BBCodeContent\\Hooks::registrationCallback",
+	"manifest_version": 1
+}

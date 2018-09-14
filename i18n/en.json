@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"author": "Ken Hilton"
+	},
+	"bbcodecontent": "BBCodeContent",
+	"bbcc-desc": "Adds a BBCode content model",
+	"bbcc-quote-author": "$1 wrote:"
+}
